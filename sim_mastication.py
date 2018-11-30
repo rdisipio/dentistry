@@ -37,7 +37,8 @@ print "INFO: number of sieves:", n_sieves
 
 all_particles = []
 
-ofile = TFile.Open( "mastication.root", "RECREATE" )
+ofname = "mastication_%i_%i.root" % ( ntrial, nparticles_avg )
+ofile = TFile.Open( ofname, "RECREATE" )
 _h = {}
 _h['all_particle_radius'] = TH1F( "all_particle_radius", ";Radius [mm]", 5, 0., r_max )
 _h['all_particle_weight'] = TH1F( "all_particle_weight", ";Weight [mg]", 10, 0., w_max )
